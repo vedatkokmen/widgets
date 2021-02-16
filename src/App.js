@@ -1,25 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Accordion from "./components/Accordion";
+import Search from "./components/Search";
+import Dropdown from "./components/Dropdown";
 
-function App() {
+const items = [
+  {
+    title: "Lorem ipsum dolor sit amet.",
+    content:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, quia.",
+  },
+  {
+    title: "Lorem ipsum dolor sit amet.",
+    content:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, quia.",
+  },
+  {
+    title: "Lorem ipsum dolor sit amet.",
+    content:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, quia.",
+  },
+];
+
+const options = [
+  {
+    label: "Green dolor sit amet.",
+    value: "green",
+  },
+  {
+    label: "Red ipsum dolor amet.",
+    value: "red",
+  },
+  {
+    label: "Blue lorem ipsum dolor.",
+    value: "blue",
+  },
+];
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="ui container">
+      <Dropdown options={options} />
     </div>
   );
-}
+};
 
 export default App;
